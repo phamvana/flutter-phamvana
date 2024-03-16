@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:phamvana/ui/cart/cart_screen.dart';
+// import 'package:phamvana/ui/cart/cart_screen.dart';
+import 'package:phamvana/ui/orders/orders_screen.dart';
 // import 'package:phamvana/ui/products/products_overview_screen.dart';
 // import 'ui/products/product_detail_screen.dart';
 // import 'ui/products/product_manager.dart';
@@ -56,7 +57,8 @@ class AppPhamVanA extends StatelessWidget {
        * 2/3/2024 Hiệu chỉnh trang tổng quan các sản phẩm
       */
       home: const SafeArea(
-        child: CartScreen(),
+        child: OrdersScreen(),
+        // child: CartScreen(),
         // child: UserProductsScreen(),
         // child: ProductOverviewScreen(),
       ),

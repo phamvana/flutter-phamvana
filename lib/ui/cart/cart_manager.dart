@@ -5,28 +5,29 @@
 
 import '../../models/cart_item.dart';
 
-class CartManager{
+class CartManager {
   final Map<String, CartItem> _items = {
-    'p1':CartItem(
-      id:'c1',
+    'p1': CartItem(
+      id: 'c1',
       title: 'Áo đỏ',
-      imageUrl: 'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
+      imageUrl:
+          'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
       price: 29.99,
-      quantity: 2,
+      quantity: 20,
     ),
   };
 
   /*
    * Biến điếm số phần tử của items
    */
-  int get productCount{
+  int get productCount {
     return _items.length;
   }
 
   /*
    * Danh sách sản phẩm
    */
-  List<CartItem> get products{
+  List<CartItem> get products {
     return _items.values.toList();
   }
 
@@ -35,7 +36,7 @@ class CartManager{
    * Tìm hiểu thêm phần Iterable 
    * 10/3/2024
    */
-  Iterable<MapEntry<String, CartItem>> get productEntries{
+  Iterable<MapEntry<String, CartItem>> get productEntries {
     return {..._items}.entries;
   }
 
@@ -43,11 +44,11 @@ class CartManager{
    * Tạo biến tổng giá trị giỏ hàng
    * 
    */
-  double get totalAmount{
+  double get totalAmount {
     var total = 0.0;
     _items.forEach((key, cartItem) {
       total += cartItem.price * cartItem.quantity;
-     });
-     return total;
+    });
+    return total;
   }
 }

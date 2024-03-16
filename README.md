@@ -17,11 +17,10 @@ samples, guidance on mobile development, and a full API reference.
 
 - Trang 12
 - 10/3/2024 - Thực hiện lab2
-* LAB2
+# LAB2
 ## Bước 1: Xây dựng trang giỏ hàng
 
-
-12/3/2024 - Trang 5 lab2 - Dialog
+- 12/3/2024 - Trang 5 lab2 - Dialog
 ========
 
 - 16/3/24 - Tiếp tục thực hiện 
@@ -42,3 +41,14 @@ Widget FittedBox co giãn và bố trí con của nó theo tiêu chí được c
 
 Định nghĩa trang hiển thị thông tin một giỏ hàng (lib/ui/cart/cart_screen.dart):
 Hiệu chỉnh lib/main.dart kiểm tra trang hiển thị giỏ hàng
+
+## Bước 2: Xây dựng trang hiển thị các đặt hàng
+
+- Định nghĩa lớp OrderItem miêu tả thông tin một đặt hàng (lib/models/order_item.dart)
+
+- Định nghĩa lớp OrderManager quản lý các đặt hàng (lib/ui/orders/order_manager.dart)
+- Định nghĩa widget OrderItemCard hiển thị thông tin một đặt hàng 
+(lib/ui/orders/order_item_card.dart):
+
+- Định nghĩa trang hiển thị thông tin các đặt hàng (lib/ui/orders/orders_screen.dart)
+- Hiệu chỉnh lib/main.dart kiểm tra trang hiển thị các đặt hàng.
