@@ -19,6 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 - 10/3/2024 - Thực hiện lab2
 * LAB2
 ## Bước 1: Xây dựng trang giỏ hàng
+
 ========
 12/3/2024 - Trang 5 lab2 - Dialog
 ========
