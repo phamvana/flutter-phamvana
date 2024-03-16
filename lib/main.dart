@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:phamvana/ui/cart/cart_screen.dart';
 // import 'package:phamvana/ui/products/products_overview_screen.dart';
 // import 'ui/products/product_detail_screen.dart';
 // import 'ui/products/product_manager.dart';
-import 'ui/products/user_products_sreen.dart';
+// import 'ui/products/user_products_sreen.dart';
 
 //Chương trình chính được chạy ở hàm main
 void main() {
@@ -22,14 +23,27 @@ class AppPhamVanA extends StatelessWidget {
       surfaceTint: Colors.grey[200],
     );
     final themeData = ThemeData(
-        fontFamily: 'Lato',
-        colorScheme: colorScheme,
-        appBarTheme: AppBarTheme(
-          backgroundColor: colorScheme.primary,
-          foregroundColor: colorScheme.onPrimary,
-          elevation: 4,
-          shadowColor: colorScheme.shadow,
-        ));
+      fontFamily: 'Lato',
+      colorScheme: colorScheme,
+      appBarTheme: AppBarTheme(
+        backgroundColor: colorScheme.primary,
+        foregroundColor: colorScheme.onPrimary,
+        elevation: 4,
+        shadowColor: colorScheme.shadow,
+      ),
+      // Thêm định nghĩa DialogTheme vào ThemeData
+      dialogTheme: DialogTheme(
+        titleTextStyle: TextStyle(
+          color: colorScheme.onBackground,
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+        ),
+        contentTextStyle: TextStyle(
+          color: colorScheme.onBackground,
+          fontSize: 20,
+        ),
+      ),
+    );
     return MaterialApp(
       title: 'Phạm Văn Á Project',
       debugShowCheckedModeBanner: false,
@@ -42,7 +56,8 @@ class AppPhamVanA extends StatelessWidget {
        * 2/3/2024 Hiệu chỉnh trang tổng quan các sản phẩm
       */
       home: const SafeArea(
-        child: UserProductsScreen(),
+        child: CartScreen(),
+        // child: UserProductsScreen(),
         // child: ProductOverviewScreen(),
       ),
       // SafeArea(
