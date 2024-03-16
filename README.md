@@ -19,7 +19,10 @@ samples, guidance on mobile development, and a full API reference.
 - 10/3/2024 - Thực hiện lab2
 * LAB2
 ## Bước 1: Xây dựng trang giỏ hàng
+========
 12/3/2024 - Trang 5 lab2 - Dialog
+========
+
 16/3/24 - Tiếp tục thực hiện 
 Hàm showDialog(context, builder): hiển thị một hộp thoại phía trên nội dung hiện thời. Tham 
 số builder là hàm tạo widget Dialog. Hai dạng widget Dialog phổ biến: AlertDialog và 
