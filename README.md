@@ -1,6 +1,14 @@
 # phamvana
 
-A new Flutter project.
+## Xây dựng ứng dụng MyShop
+- Ứng dụng MyShop có các chức năng chính sau:
+- Hiển thị và cập nhật danh mục các sản phẩm
+- Xem chi tiết một sản phẩm
+- Đánh dấu sản phẩm được yêu thích
+- Thêm, xóa sản phẩm trong giỏ hàng
+- Thực hiện đặt hàng, xem lại đơn hàng, chi tiết đơn hàng
+- Đăng ký, đăng nhập
+- Lưu trữ dữ liệu trên Firebase
 
 ## Getting Started
 
@@ -68,3 +76,7 @@ tập tin lib/ui/screens.dart
 - Định nghĩa widget TopRightBadge (lib/ui/products/top_right_badge.dart) nhận vào một widget 
 con và một giá trị. Giá trị sẽ được hiển thị ở góc trên bên phải của widget con:
 - Hiệu chỉnh trang tổng quan các sản phẩm (lib/ui/products/products_overview_screen.dart) bao widget IconButton với widget TopRightBadge
+
+# 17/3/2024 - LAb3
+
+## Bước 1: Xây dựng chức năng chọn sản phẩm yêu thích
