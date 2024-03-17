@@ -21,7 +21,7 @@ samples, guidance on mobile development, and a full API reference.
 ## Bước 1: Xây dựng trang giỏ hàng
 
 - 12/3/2024 - Trang 5 lab2 - Dialog
-========
+
 
 - 16/3/24 - Tiếp tục thực hiện 
 - Hàm showDialog(context, builder): hiển thị một hộp thoại phía trên nội dung hiện thời. Tham 
@@ -29,8 +29,8 @@ số builder là hàm tạo widget Dialog. Hai dạng widget Dialog phổ biến
 - SimpleDialog. Các thuộc tính quan trọng của một AlertDialog là title: tựa đề hội thoại, content: 
 nội dung chính hội thoại và actions: dòng các nút tương tác với hội thoại.
 Hiệu chỉnh ThemeData của MaterialApp trong lib/main.dart để tùy chỉnh theme cho dialog
-========
-Định nghĩa widget CartItemCard hiển thị thông tin một mặt hàng trong giỏ hàng 
+
+- Định nghĩa widget CartItemCard hiển thị thông tin một mặt hàng trong giỏ hàng 
 (lib/ui/cart/cart_item_card.dart)
 
 Widget Dismissible là widget có thể được loại bỏ (dismiss) bằng cách vuốt theo hướng chỉ định. Một số thuộc tính quan trọng của Dismissable: key thuộc tính đùng định danh widget; 
@@ -52,3 +52,13 @@ Hiệu chỉnh lib/main.dart kiểm tra trang hiển thị giỏ hàng
 
 - Định nghĩa trang hiển thị thông tin các đặt hàng (lib/ui/orders/orders_screen.dart)
 - Hiệu chỉnh lib/main.dart kiểm tra trang hiển thị các đặt hàng.
+
+## Bước 3: Định tuyến theo tên
+
+- Tạo tập tin lib/ui/screens.dart là tập tin import tập trung của thư mục lib/ui
+- Hiệu chỉnh tập tin lib/main.dart, thay vì import từng tập tin *_screen riêng lẻ, chỉ cần import 
+tập tin lib/ui/screens.dart
+- Hiệu chỉnh lib/main.dart, khai báo các trang của ứng dụng
+- Trong đoạn mã nguồn trên, phương thức findById() định nghĩa trong lớp ProductsManager 
+(lib/ui/products/products_manager.dart) như sau
+- trang 22 lab2

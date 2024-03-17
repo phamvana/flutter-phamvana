@@ -9,6 +9,7 @@ import '../../models/product.dart';
  * Lớp chi tiết sản phẩm
  */
 class ProductDetailSreen extends StatelessWidget {
+  static const routeName = '/product-detail';
   const ProductDetailSreen(this.product, {super.key});
 
   final Product product;

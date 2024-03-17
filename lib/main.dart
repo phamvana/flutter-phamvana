@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:phamvana/ui/cart/cart_screen.dart';
 // import 'package:phamvana/ui/cart/cart_screen.dart';
 import 'package:phamvana/ui/orders/orders_screen.dart';
+import 'package:phamvana/ui/products/product_detail_screen.dart';
+import 'package:phamvana/ui/products/product_manager.dart';
+import 'package:phamvana/ui/products/user_products_sreen.dart';
 // import 'package:phamvana/ui/products/products_overview_screen.dart';
 // import 'ui/products/product_detail_screen.dart';
 // import 'ui/products/product_manager.dart';
@@ -49,6 +53,43 @@ class AppPhamVanA extends StatelessWidget {
       title: 'Phạm Văn Á Project',
       debugShowCheckedModeBanner: false,
       theme: themeData,
+      home: const ProductsOverviewScreen(),
+      // thuộc tính routes thường dùng khai báo
+      //các route không tham số.
+      routes: {
+        CartScreen.routeName: (ctx) => const SafeArea(
+              child: CartScreen(),
+            ),
+        OrdersScreen.routeName: (cxt) => const SafeArea(
+              child: OrdersScreen(),
+            ),
+        UserProductsScreen.routeName: (cxt) => const SafeArea(
+              child: UserProductsScreen(),
+            ),
+      },
+      // onGenerateRoute sẽ được gọi khi không tìm thấy route yêu cầu
+      // trong thuộc tính routes ở trên. Thường dùng để truyền tham số
+      // hoặc tùy biến hiệu ứng chuyển trang.
+      onGenerateRoute: (settings) {
+        if (settings.name == ProductDetailSreen.routeName) {
+          final productId = settings.arguments as String;
+          return MaterialPageRoute(
+            settings: settings,
+            builder: (ctx) {
+              return SafeArea(
+                child: ProductDetailSreen(
+                  ProductsManager().findById(productId)!,
+                ),
+              );
+            },
+          );
+        }
+
+        return null;
+      },
+    );
+  }
+}
       /*
        * Đặt ProductDetailScreen làm trang chủ
        * sử dụng SafeArea để thay thế cho Scaffold
@@ -56,12 +97,12 @@ class AppPhamVanA extends StatelessWidget {
        * thành phần giao diện của hệ điều hành
        * 2/3/2024 Hiệu chỉnh trang tổng quan các sản phẩm
       */
-      home: const SafeArea(
-        child: OrdersScreen(),
+      // home: const SafeArea(
+      //   child: OrdersScreen(),
         // child: CartScreen(),
         // child: UserProductsScreen(),
         // child: ProductOverviewScreen(),
-      ),
+      
       // SafeArea(
       //   child: ProductDetailSreen(
       //     ProductsManager().items[0],
@@ -75,6 +116,4 @@ class AppPhamVanA extends StatelessWidget {
       //     child: Text('Xin chào'),
       //   ),
       // ),
-    );
-  }
-}
+
