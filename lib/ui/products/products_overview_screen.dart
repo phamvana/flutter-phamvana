@@ -6,6 +6,9 @@ import 'package:phamvana/ui/cart/cart_screen.dart';
 import 'products_grid.dart';
 import '../shared/app_drawer.dart';
 
+import '../cart/cart_manager.dart';
+import 'top_right_badge.dart';
+
 enum FilterOptions { favorites, all }
 
 class ProductOverviewScreen extends StatefulWidget {
@@ -97,10 +100,15 @@ class ShoppingCartButton extends StatelessWidget {
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
-    return IconButton(
+    // Bao IconButton với TopRightBadge
+    return TopRightBadge(
+      data: CartManager().productCount,
+      child: IconButton(
         onPressed: onPressed,
         icon: const Icon(
           Icons.shopping_cart,
-        ));
+        ),
+      ),
+    );
   }
 }

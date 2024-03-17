@@ -65,3 +65,9 @@ tập tin lib/ui/screens.dart
 (lib/ui/shared/app_drawer.dart)
 
 - Thêm drawer vào các trang, điều chỉnh điều hướng giữa các trang
+
+## Bước 4: Thêm thông tin số sản phẩm trong giỏ hàng
+
+- Định nghĩa widget TopRightBadge (lib/ui/products/top_right_badge.dart) nhận vào một widget 
+con và một giá trị. Giá trị sẽ được hiển thị ở góc trên bên phải của widget con:
+- Hiệu chỉnh trang tổng quan các sản phẩm (lib/ui/products/products_overview_screen.dart) bao widget IconButton với widget TopRightBadge
