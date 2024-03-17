@@ -16,15 +16,14 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 # 10/3/2024 - Thực hiện lab2
-# LAB2
+
 ## Bước 1: Xây dựng trang giỏ hàng
 
 - 12/3/2024 - Trang 5 lab2 - Dialog
 
+- 16/3/24 - Tiếp tục thực hiện
 
-- 16/3/24 - Tiếp tục thực hiện 
-- Hàm showDialog(context, builder): hiển thị một hộp thoại phía trên nội dung hiện thời. Tham 
-số builder là hàm tạo widget Dialog. Hai dạng widget Dialog phổ biến: AlertDialog và 
+- Hàm showDialog(context, builder): hiển thị một hộp thoại phía trên nội dung hiện thời. Tham số builder là hàm tạo widget Dialog. Hai dạng widget Dialog phổ biến: AlertDialog và 
 - SimpleDialog. Các thuộc tính quan trọng của một AlertDialog là title: tựa đề hội thoại, content: 
 nội dung chính hội thoại và actions: dòng các nút tương tác với hội thoại.
 Hiệu chỉnh ThemeData của MaterialApp trong lib/main.dart để tùy chỉnh theme cho dialog
@@ -32,14 +31,12 @@ Hiệu chỉnh ThemeData của MaterialApp trong lib/main.dart để tùy chỉn
 - Định nghĩa widget CartItemCard hiển thị thông tin một mặt hàng trong giỏ hàng 
 (lib/ui/cart/cart_item_card.dart)
 
-Widget Dismissible là widget có thể được loại bỏ (dismiss) bằng cách vuốt theo hướng chỉ định. Một số thuộc tính quan trọng của Dismissable: key thuộc tính đùng định danh widget; 
-direction chỉ định hướng vuốt widget (DismissDirection); background widget nền cho widget con; 
-confirmDismiss hàm được gọi để xác nhận loại bỏ, trả về true widget sẽ được loại bỏ, ngược lại quay về vị trí cũ; onDismissed hàm được gọi sau khi widget đã được loại bỏ.
+- Widget Dismissible là widget có thể được loại bỏ (dismiss) bằng cách vuốt theo hướng chỉ định. Một số thuộc tính quan trọng của Dismissable: key thuộc tính đùng định danh widget; direction chỉ định hướng vuốt widget (DismissDirection); background widget nền cho widget con; confirmDismiss hàm được gọi để xác nhận loại bỏ, trả về true widget sẽ được loại bỏ, ngược lại quay về vị trí cũ; onDismissed hàm được gọi sau khi widget đã được loại bỏ.
 
-Widget FittedBox co giãn và bố trí con của nó theo tiêu chí được chỉ định bởi thuộc tính fit (mặc định là BoxFit.contain). Hiệu chỉnh CartItemCard.
+- Widget FittedBox co giãn và bố trí con của nó theo tiêu chí được chỉ định bởi thuộc tính fit (mặc định là BoxFit.contain). Hiệu chỉnh CartItemCard.
 
-Định nghĩa trang hiển thị thông tin một giỏ hàng (lib/ui/cart/cart_screen.dart):
-Hiệu chỉnh lib/main.dart kiểm tra trang hiển thị giỏ hàng
+- Định nghĩa trang hiển thị thông tin một giỏ hàng (lib/ui/cart/cart_screen.dart):
+- Hiệu chỉnh lib/main.dart kiểm tra trang hiển thị giỏ hàng
 
 ## Bước 2: Xây dựng trang hiển thị các đặt hàng
 
