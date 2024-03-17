@@ -15,8 +15,7 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-- Trang 12
-- 10/3/2024 - Thực hiện lab2
+# 10/3/2024 - Thực hiện lab2
 # LAB2
 ## Bước 1: Xây dựng trang giỏ hàng
 
@@ -61,4 +60,8 @@ tập tin lib/ui/screens.dart
 - Hiệu chỉnh lib/main.dart, khai báo các trang của ứng dụng
 - Trong đoạn mã nguồn trên, phương thức findById() định nghĩa trong lớp ProductsManager 
 (lib/ui/products/products_manager.dart) như sau
-- trang 22 lab2
+
+- Định nghĩa widget AppDrawer thực hiện điều hướng trong ứng dụng 
+(lib/ui/shared/app_drawer.dart)
+
+- Thêm drawer vào các trang, điều chỉnh điều hướng giữa các trang

@@ -4,6 +4,7 @@ import 'package:phamvana/ui/cart/cart_screen.dart';
 import 'package:phamvana/ui/orders/orders_screen.dart';
 import 'package:phamvana/ui/products/product_detail_screen.dart';
 import 'package:phamvana/ui/products/product_manager.dart';
+import 'package:phamvana/ui/products/products_overview_screen.dart';
 import 'package:phamvana/ui/products/user_products_sreen.dart';
 // import 'package:phamvana/ui/products/products_overview_screen.dart';
 // import 'ui/products/product_detail_screen.dart';
@@ -53,7 +54,7 @@ class AppPhamVanA extends StatelessWidget {
       title: 'Phạm Văn Á Project',
       debugShowCheckedModeBanner: false,
       theme: themeData,
-      home: const ProductsOverviewScreen(),
+      home: const ProductOverviewScreen(),
       // thuộc tính routes thường dùng khai báo
       //các route không tham số.
       routes: {
@@ -90,6 +91,7 @@ class AppPhamVanA extends StatelessWidget {
     );
   }
 }
+
       /*
        * Đặt ProductDetailScreen làm trang chủ
        * sử dụng SafeArea để thay thế cho Scaffold

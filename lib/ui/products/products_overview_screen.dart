@@ -2,7 +2,9 @@
  * Định nghĩa tổng quan sản phẩm
  */
 import 'package:flutter/material.dart';
+import 'package:phamvana/ui/cart/cart_screen.dart';
 import 'products_grid.dart';
+import '../shared/app_drawer.dart';
 
 enum FilterOptions { favorites, all }
 
@@ -36,11 +38,15 @@ class _ProductOverviewScreenState extends State<ProductOverviewScreen> {
           ),
           ShoppingCartButton(
             onPressed: () {
-              print('Go to cart screen');
+              // Chuyển đến trang CartScreen
+              Navigator.of(context).pushNamed(CartScreen.routeName);
+              // print('Go to cart screen');
             },
           ),
         ],
       ),
+      // Thêm Drawer
+      drawer: const AppDrawer(),
       body: ProductsGird(
         showFavorites: _showOnlyFavorites,
       ),

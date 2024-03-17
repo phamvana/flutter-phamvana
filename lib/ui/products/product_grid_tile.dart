@@ -31,13 +31,15 @@ class ProductGridTile extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             //Chuyển đến ProductDetailSreen
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (ctx) => ProductDetailSreen(product),
-              ),
+            Navigator.of(context).pushNamed(
+              ProductDetailSreen.routeName,
+              arguments: product.id,
+              // MaterialPageRoute(
+              //   builder: (ctx) => ProductDetailSreen(product),
+              // ),
             );
-            print(
-                'Go to product detail screen | Chuyen den ProductDetailSreen - Pham Van A');
+            // print(
+            // 'Go to product detail screen | Chuyen den ProductDetailSreen - Pham Van A');
           },
           child: Image.network(
             product.imageUrl, // Lấy ảnh từ product
